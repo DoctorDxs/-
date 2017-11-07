@@ -1,0 +1,4 @@
+<template name="qingful-line" >
+	<view class="qingful-line" style="height:{{lineData.height+'rpx'}};background:{{lineData.color?lineData.color:'#f4f4f4'}}">
+	</view>
+</template>	

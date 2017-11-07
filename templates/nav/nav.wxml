@@ -1,0 +1,10 @@
+<template name='nav'>
+  <view class='bottomnav_style' style='style'>
+    <block wx:for='{{nav}}' wx:key>
+      <view class='bar_item' bindtap='onClick' data-click='{{item.click_type}}' data-skippath='{{item.skip_path}}' style='background:{{item.bgColor}}'>
+        <text class='bottomnav_icon iconfont {{item.iconname}}' style='color:{{item.iconColor}}'></text>
+        <text class='bottomnav_title' style='color:{{item.titleColor}}'>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+</template>

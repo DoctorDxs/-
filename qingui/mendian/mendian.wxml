@@ -1,0 +1,25 @@
+<template name="qingful-mendian">
+	<view class="qingful-mendian">
+		<view class="qingful-mendian-img qingful-product-init">
+			<view>
+				<image mode="scaleToFill" src="{{data.img_url}}"/>
+			</view>
+			<view class="qingful-mendian-text">
+				<text class="qingful-mendian-name">{{data.name}}</text>
+				<text class="qingful-mendian-detail">{{data.sub}}</text>
+			</view>
+		</view>
+		<view class="qingful-product-init">
+			<view wx:if="{{data.show_address==1}}" class="qingful-mendian-address qingful-product-init" data-lat="{{data.lat}}" data-lng="{{data.lng}}" bindtap='onOpenMapTap' >
+				<i class="icon-address iconfont" style="color:{{color}};font-size:40rpx"></i>
+				<text style="font-size:28rpx">{{data.address}}</text>
+			</view>
+			<view wx:if="{{data.show_address==0}}" class="qingful-mendian-address" style="margin-left:15rpx">
+				<text style="font-size:28rpx">{{data.phone}}</text>
+			</view>
+			<view wx:if="{{data.show_phone==1}}" class="qingful-mendian-phone" >
+				<i bindtap="onCallPhoneTap" data-phone='{{data.phone}}'  class="icon-phone iconfont qingful-mendian-phone-icon" style="color:{{color}};font-size:60rpx"></i>
+			</view>
+		</view>
+	</view>
+</template>	

@@ -1,0 +1,17 @@
+<template name="qingful-title">
+  <view class="qingful_title" >
+    	<view>
+    	  <text class="qingful-title-text" style="background:{{title.color?title.color:'#fd7608'}}"></text>
+    	</view>
+ 		<view class="qingful_title_text">
+ 		 <view class="qingful-title-image-view">
+ 		      <image mode="scaleToFill" class="qingful-title-img" src="{{title.imgurl}}"></image>
+ 		 </view>
+ 		  
+ 		   <text class="qingful-title-title" style="color:{{title.color?title.color:'#fd7608'}}">{{title.title}}</text>
+ 		</view>
+ 		<view>
+ 			<text class="qingful-title-text" style="background:{{title.color?title.color:'#fd7608'}}"></text>
+ 		</view>
+  </view>
+</template>

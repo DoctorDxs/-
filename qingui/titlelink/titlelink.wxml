@@ -1,0 +1,17 @@
+<template name="qingful-titlelink">
+	<view class="qingful-titlelink qingful-product-init" data-path="{{titlelinkData.link}}"  bindtap="jumpTitleLink">
+		<view style="flex:1" class="qingful-product-init"  >
+		   <view class="">
+		   		<image class="qingful-titlelink-img"  mode="scaleToFill" src="{{titlelinkData.imgurl}}"/>
+		   </view>
+		   <view>
+		   		<text style="color:{{titlelinkData.title_color}}" class="qingful-titlelink-title">{{titlelinkData.title}}</text>
+		   </view>
+		</view>
+		<view style="flex:1;align-items:center;justify-content:flex-end;" class="qingful-product-init">
+			<text style="color:{{titlelinkData.text_color}}">{{titlelinkData.text}}</text>
+			<i style="color:{{titlelinkData.text_color}}" class="iconfont icon-right"></i>
+		</view>
+	</view>
+
+</template>	

@@ -1,0 +1,9 @@
+<template name='MINA'>
+  <view style='background:url({{bgImg}});top:{{top*2}}rpx;left:{{left*2}}rpx;border-radius:{{border_radius}};width:{{width*2}}rpx;height:{{height*2}}rpx;transform:{{rotate}};position:{{position?position:"absolute"}};opacity:{{opacity}};border:{{border}};'>
+    <!-- <image ></image> -->
+    <view>
+      <text>{{name}}</text>
+      <text>{{info}}</text>
+    </view>
+  </view>
+</template>

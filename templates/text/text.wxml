@@ -1,0 +1,3 @@
+<template name='text'>
+  <text class='text-style' style='width:{{width*2}}rpx;height:{{height*2}}rpx;color:{{color}};background:{{background}};top:{{top*2}}rpx;z-index:{{z_index}};border:{{border}};position:{{position ? position : "absolute" }};opacity:{{opacity}};border-radius:{{radius}};transform: {{rotate}}' bindtap='onClick' data-click='{{click_type}}' data-skippath='{{skip_path}}'>{{text_content}}</text>
+</template>

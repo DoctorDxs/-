@@ -1,0 +1,40 @@
+.qingful-mendian{
+	background:#fff;
+	padding-top:30rpx;
+	padding-bottom:20rpx;
+}
+
+.qingful-mendian-img image{
+	width:120rpx;
+	height:120rpx;
+	margin-left:20rpx;
+}
+.qingful-mendian-text{
+	margin-left:20rpx;
+}
+.qingful-mendian-name{
+	margin-top:16rpx;
+	display:block;
+	color:#333333;
+	font-size:36rpx;
+}
+.qingful-mendian-detail{
+	margin-top:8rpx;
+	display:block;
+	color:#333333;
+	font-size:28rpx;
+}
+.qingful-mendian-address{
+	margin-left:10rpx;
+	flex:7;
+}
+.qingful-mendian-phone{
+	flex:1;
+	text-align:right;
+}
+.qingful-mendian-phone-icon{
+	display:block;
+	padding-right:20rpx;
+	padding-left:40rpx;
+	border-left:1rpx solid #f4f4f4;
+}

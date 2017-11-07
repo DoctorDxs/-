@@ -1,0 +1,16 @@
+<template name="qingful-broadcast">
+	<view class="qingful-broadcast" style="{{themeWidth+'px'}}">
+	  <view>
+	  	<image  mode="scaleToFill"  src="/qingui/image/toutiao.png" class="qingful-broadcast-image"/>
+	  </view>
+	  <view class="qingful-broadcast-swiper-view" style="width:{{themeWidth-50+'px'}}">
+	  	  <swiper  autoplay="true" interval="2000" duration="1000"  vertical="true" class="qingful-broadcast-swiper">
+		    <block wx:for="{{broadcastData}}" wx:for-item="item" wx:key="_slide">
+		      <swiper-item  data-url="http://pifa.api.qingful.com/uploads/2017-08-08/f2658409-7210-4f1d-a67f-056ce038b1e1.jpg" class="qingful-broadcast-swiper-item">
+		           <text class="qingful-broadcast-text" data-path="{{item.link}}"  bindtap="jumpBroadcast">{{item.name}}</text>
+		      </swiper-item>
+		    </block>
+  		</swiper>
+	  </view>
+	</view>
+</template>	

@@ -1,0 +1,5 @@
+<template name="qingful-ads">
+  <view class="qingful-ads" style="border-radius:{{url.angle==1?'0px':'10rpx'}};height:{{url.height +'rpx'}}"  >
+       <image  class="qingful-ads-image" mode="scaleToFill" src="{{url.img_url}}" style="border-radius:{{url.angle==1?'0px':'10rpx'}};height:{{url.height +'rpx'}}" data-path="{{url.link}}"  bindtap="jumpAds"></image>	
+  </view>
+</template>

@@ -1,0 +1,13 @@
+.qingful-ads{
+	/* padding-left:20rpx;
+  padding-right:20rpx;  */
+  height:180rpx;
+  background:#f4f4f4;
+
+}
+.qingful-ads-image{
+	/*height:180rpx;*/
+	background:#fff;
+	/*border-radius:10rpx;*/
+	width:100%
+}

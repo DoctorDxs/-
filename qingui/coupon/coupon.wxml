@@ -1,0 +1,37 @@
+<template name="qingful-coupon">
+	<view class="qingful-coupon">
+	   <scroll-view  scroll-x="true" style="margin-left:20rpx" >
+	     <view class="qingful-coupon-content">
+	     		<view wx:for="{{couponData}}" wx:for-item="item" wx:key="_coupon" class="qingful-coupon-content-view">
+	     		   <view class="qingful-coupon-button"></view>
+	     		   <view class="qingful-coupon-left" wx:if="{{index%3==0}}" style="background:#fe5e39;display:block;border-right:2rpx dashed rgba(255,255,255,0.2);">
+	     		   		<view style="text-align:center;margin-top:35rpx">
+	     		   		    <text style="font-size:24rpx">￥</text><text style="font-size:37rpx">{{item.price}}</text>
+	     		   		</view>
+	     		   		
+	     		   		<text style="display:block;font-size:24rpx;text-align:center">[满{{item.use_price}}可用]</text>
+	     		   </view>
+	     		   <view class="qingful-coupon-left" wx:if="{{index%3==1}}" style="background:#fe7e39;display:block;border-right:2rpx dashed rgba(255,255,255,0.2);">
+	     		   		<view style="text-align:center;margin-top:35rpx">
+	     		   		    <text style="font-size:24rpx">￥</text><text style="font-size:37rpx">{{item.price}}</text>
+	     		   		</view>
+	     		   		
+	     		   		<text style="display:block;font-size:24rpx;text-align:center">[满{{item.use_price}}可用]</text>
+	     		   </view>
+	     		   <view class="qingful-coupon-left" wx:if="{{index%3==2}}" style="background:#fea439;display:block;border-right:2rpx dashed rgba(255,255,255,0.2);">
+	     		   		<view style="text-align:center;margin-top:35rpx">
+	     		   		    <text style="font-size:24rpx">￥</text><text style="font-size:37rpx">{{item.price}}</text>
+	     		   		</view>
+	     		   		
+	     		   		<text style="display:block;font-size:24rpx;text-align:center">[满{{item.use_price}}可用]</text>
+	     		   </view>
+	     		   <view class="qingful-coupon-right" wx:if="{{index%3==0}}" style="background:#fe5e39;display:block" data-path="{{item.url}}"  bindtap="jumpCoupon"><text style="margin-top:17rpx">立</text><text>即</text><text>领</text><text>取</text></view>
+	     		   <view class="qingful-coupon-right" wx:if="{{index%3==1}}" style="background:#fe7e39;display:block" data-path="{{item.url}}"  bindtap="jumpCoupon"><text style="margin-top:17rpx">立</text><text>即</text><text>领</text><text>取</text></view>
+	     		   <view class="qingful-coupon-right" wx:if="{{index%3==2}}" style="background:#fea439;display:block" data-path="{{item.url}}"  bindtap="jumpCoupon"><text style="margin-top:17rpx">立</text><text>即</text><text>领</text><text>取</text></view>
+	     		   <view class="qingful-coupon-bottom"></view>
+	           </view>
+	     </view>
+	      
+	   </scroll-view>
+	</view>
+</template>	

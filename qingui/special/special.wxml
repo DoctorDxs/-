@@ -1,0 +1,7 @@
+<template name="qingful-special">
+  <view class="qingful-special-content" >
+     <view wx:for="{{url}}" wx:for-item="item" wx:key="_url" class="qingful-special-unit" data-path="{{item.link}}" style="width:{{specialWidth}}" bindtap="jumpSpecial">
+     	  <image class="qingful-special-image" style="width:{{specialWidth}}" mode="scaleToFill" src="{{item.img_url}}"></image>	
+     </view>
+  </view>
+</template>

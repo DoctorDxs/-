@@ -1,0 +1,23 @@
+<template name="qingful-link">
+    <view wx:for="{{linkData}}" wx:for-item="item" wx:key="_link" class="item">
+        <view class="qingful-content" bindtap="link" data-appid="{{item.appid}}" > 
+        	<view>
+        		 <image  mode="scaleToFill" src="{{item.img_url}}" class="qingful-link-logo"/>
+        	</view>
+
+        	<view>
+        		<text class="qingful-link-name">
+        			{{item.name}}
+        		</text>
+                <view  class="qingful-link-detail">
+                        <text>{{item.detail}}</text>
+                 
+                </view>
+        		
+        	</view>
+        </view>
+    	<view class="qingful-link">
+    	  <image  mode="scaleToFill" src="{{item.bg_url}}" class="qingful-link-img" />
+    	</view>
+    </view>    
+</template>	

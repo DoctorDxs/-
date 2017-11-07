@@ -1,0 +1,12 @@
+<template name='scroll'>
+    <scroll-view scroll-x class='scrollview_style' style="top:{{top*2}}rpx;left:{{left*2}}rpx;width:{{width*2}}rpx;height:{{height*2}}rpx;position:{{position?position:'absolute'}};background:{{bgColor}};line-height:{{lineHeight?lineHeight*2:(height-imgH)*2/3}}rpx;border-radius:{{border_radius}};border:{{border}}">
+      <block wx:for='{{scroll_items}}' wx:key>
+        <view class='img_item'  bindtap='onClick' data-click='{{item.click_type}}' data-skippath='{{item.skip_path}}'>
+          <image src='{{item.src}}' style='width:{{imgW*2}}rpx;height:{{imgH*2}}rpx;'></image>
+          <text style='width:{{imgW*2}}rpx;color:{{item.title1.color}};font-size:{{item.title1.font_size*2}}rpx;font-family:{{item.title1.font_family}}'>{{item.title1.title}}</text>
+          <text style='width:{{imgW*2}}rpx;color:{{item.title2.color}};font-size:{{item.title2.font_size*2}}rpx;font-family:{{item.title2.font_family}}'>{{item.title2.title}}</text>
+          <text style='width:{{imgW*2}}rpx;color:{{item.introduction.color}};font-size:{{item.introduction.font_size*2}}rpx;font-family:{{item.introduction.font_family}}'>{{item.introduction.content}}</text>
+        </view>
+      </block>
+    </scroll-view>
+</template>

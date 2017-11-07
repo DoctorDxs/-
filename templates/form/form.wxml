@@ -1,0 +1,62 @@
+<template name='form'>
+  <form bindsubmit="formSubmit">
+    <!-- 普通输入框  -->
+    <block wx:for='{{form.inputs}}' wx:key>
+       <input class='form_style' style='top:{{item.top*2}}rpx;left:{{item.left*2}}rpx;width:{{item.width*2}}rpx;height:{{item.height*2}}rpx;background:{{item.bgColor}};color:{{item.color}};font-size:{{item.font_size*2}}rpx;font-weight:{{item.font_weight}};font-style:{{item.font_style}};text-align:{{item.text_align}};border-radius:{{item.border_radius}};transform:{{item.rotate}};opacity:{{item.opacity}};border:{{item.border}};position:{{item.position?item.position:"absolute"}}' value='' placeholder='{{item.placeholder}}' cursor-spacing='0' name='{{item.type}}'></input> 
+    </block>
+    <!-- 省市区 -->
+    <block wx:for='{{form.region}}' wx:key>
+      <picker class='form_style' style='top:{{item.top*2}}rpx;left:{{item.left*2}}rpx;width:{{item.width*2}}rpx;height:{{item.height*2}}rpx;background:{{item.bgColor}};color:{{item.color}};font-size:{{item.font_size*2}}rpx;font-weight:{{item.font_weight}};font-style:{{item.font_style}};text-align:{{item.text_align}};border-radius:{{item.border_radius}};transform:{{item.rotate}};opacity:{{item.opacity}};border:{{item.border}};position:{{item.position?item.position:"absolute"}}' mode='region' value='' bindchange='chooseCity' name='region' data-index='{{index}}'>
+        <view class='item_style' style='height:{{item.height*2}}rpx;'>
+          <view>
+            <input value='{{item.region[0]}}' placeholder='请选择' disabled='true'></input>
+            <text>省</text>
+          </view>
+          <view>
+            <input value='{{item.region[1]}}' placeholder='请选择' disabled='true'></input>
+            <text>市</text>
+          </view>
+          <view>
+            <input value='{{item.region[2]}}' placeholder='请选择' disabled='true'></input>
+            <text>区</text>
+          </view>
+        </view>
+      </picker>
+    </block>
+    <!--  年月日  -->
+    <block wx:for='{{form.date}}' wx:key>
+      <picker class='form_style' style='top:{{item.top*2}}rpx;left:{{item.left*2}}rpx;width:{{item.width*2}}rpx;height:{{item.height*2}}rpx;background:{{item.bgColor}};color:{{item.color}};font-size:{{item.font_size*2}}rpx;font-weight:{{item.font_weight}};font-style:{{item.font_style}};text-align:{{item.text_align}};border-radius:{{item.border_radius}};transform:{{item.rotate}};opacity:{{item.opacity}};border:{{item.border}};position:{{item.position?item.position:"absolute"}}' mode='date' value='' bindchange='chooseDate' name='date' data-index='{{index}}'>
+        <view class='item_style' style='height:{{item.height*2}}rpx;'>
+          <view>
+            <input value='{{item.date[0]}}' placeholder='请选择' disabled='true'></input>
+            <text>年</text>
+          </view>
+          <view>
+            <input value='{{item.date[1]}}' placeholder='请选择' disabled='true'></input>
+            <text>月</text>
+          </view>
+          <view>
+            <input value='{{item.date[2]}}' placeholder='请选择' disabled='true'></input>
+            <text>日</text>
+          </view>
+        </view>
+      </picker>
+    </block>
+    <!-- 时间  -->
+    <block wx:for='{{form.time}}' wx:key>
+      <picker class='form_style' style='top:{{item.top*2}}rpx;left:{{item.left*2}}rpx;width:{{item.width*2}}rpx;height:{{item.height*2}}rpx;background:{{item.bgColor}};color:{{item.color}};font-size:{{item.font_size*2}}rpx;font-weight:{{item.font_weight}};font-style:{{item.font_style}};text-align:{{item.text_align}};border-radius:{{item.border_radius}};transform:{{item.rotate}};opacity:{{item.opacity}};border:{{item.border}};position:{{item.position?item.position:"absolute"}}' mode='time' value='' bindchange='chooseTime' name='time' data-index='{{index}}'>
+        <view class='item_style' style='height:{{item.height*2}}rpx;'>
+          <view>
+            <input value='{{item.time[0]}}' placeholder='请选择' disabled='true'></input>
+            <text>时</text>
+          </view>
+          <view style='border-right:0'>
+            <input value='{{item.time[1]}}' placeholder='请选择' disabled='true'></input>
+            <text>分</text>
+          </view>
+        </view>
+      </picker>
+    </block>
+    <button class='form_style btn' formType="submit" style='top:{{form.btn.top*2}}rpx;left:{{form.btn.left*2}}rpx;width:{{form.btn.width*2}}rpx;height:{{form.btn.height*2}}rpx;position:{{form.btn.position?form.btn.pisotion:"ablulate"}};background-color:{{form.btn.bgColor}};color:{{form.btn.color}};font-size:{{form.btn.font_size*2}}rpx;font-weight:{{form.btn.font_weight}};font-style:{{form.btn.font_style}};text-align:{{form.btn.text_align}};opacity:{{form.btn.opacity}};border:{{form.btn.border}};border-radius:{{form.btn.border_radius}};line-height:{{form.btn.height*2}}rpx;'>{{form.btn.btn_text}}</button>
+  </form>
+</template>

@@ -1,0 +1,37 @@
+.qingful-menu{
+	width:100%;
+	display:inline-flex;
+	flex-wrap:wrap;
+	padding-top:30rpx;
+	background:#fff
+}
+.qingful-menu-view{
+	height:168rpx;
+	width:20%;
+	align-items:center;
+	display:flex;
+	flex-direction:column;
+}
+.qingful-menu-image{
+	width:84rpx;
+	height:84rpx;
+	border-radius:50%;
+}
+.qingful-menu-text{
+	text-align:center;
+	font-size:24rpx;
+	color:#1d1d1d;
+	display:block;
+	margin-top:-40rpx;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+
+}
+.qingful-menu-text-view{
+	width:90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}

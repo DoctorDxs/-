@@ -1,0 +1,3 @@
+.scrollview_style{position: absolute;overflow: scroll;white-space: nowrap;display: flex;}
+.img_item {margin:0 10rpx;display: inline-block;}
+.img_item text {display: block;overflow: hidden;text-overflow:ellipsis;white-space: nowrap; } 

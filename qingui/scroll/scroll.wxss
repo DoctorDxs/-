@@ -1,0 +1,22 @@
+.qingful-scroll-content{
+	display:inline-flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+.qingful-scroll-unit{
+	height:226rpx;
+	margin-right:10rpx;
+	background:#ffffff;
+	padding-bottom:12rpx;
+}
+.qingful-theme-text{
+	margin-left:10rpx;
+	color:#1e1e1e;
+	font-size:28rpx
+}
+
+.qingful-theme-view-text{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}

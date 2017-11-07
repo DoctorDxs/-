@@ -1,0 +1,5 @@
+<template name="qingful-rtf">
+	<view style="background:{{rtfData.color}};padding:{{padding+'rpx'}}">
+		<rich-text nodes="{{rtfData.content}}"></rich-text>
+	</view>
+</template>

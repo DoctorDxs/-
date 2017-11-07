@@ -1,0 +1,57 @@
+
+<!-- 文本 text -->
+<import src='../../templates/text/text.wxml' />
+<block wx:for='{{texts}}' wx:for-item='textItem' wx:key>
+  <template is='text' data='{{...textItem}}' /> 
+</block>
+
+<!-- 图片 img -->
+<import src='../../templates/image/image.wxml' />
+<block wx:for='{{imgs}}' wx:for-item='imageItem' wx:key>
+  <template is='image' data='{{...imageItem}}' />
+</block>
+
+<!-- 图标 iconfont-->
+<import src='../../templates/iconfont/iconfont.wxml' />
+<block wx:for='{{icon}}' wx:for-item='iconItem' wx:key>
+  <template is='icon' data='{{...iconItem}}' />
+</block>
+
+<!-- 视频 video -->
+<import src='../../templates/video/video.wxml' />
+<block wx:for='{{videodata}}' wx:for-item='videoItem' wx:key>
+  <template is='video' data='{{...videoItem}}' />
+</block>
+
+<!-- 幻灯片  swiper-->
+<import src='../../templates/swiper/swiper.wxml' />
+<block wx:for='{{swiper}}' wx:for-item='swiperItem' wx:key>
+  <template is='swiper' data='{{...swiperItem}}' />
+</block>
+
+<!-- 地图  map-->
+<import src='../../templates/map/map.wxml' />
+<block wx:for='{{mapdata}}' wx:for-item='mapItem' wx:key>
+  <template is='map' data='{{...mapItem}}' />
+</block>
+
+<!-- 左右滑动图 scroll-->
+<import src='../../templates/scroll/scroll.wxml' />
+<block wx:for='{{scroll}}' wx:for-item='scrollItem' wx:key>
+  <template is='scroll' data='{{...scrollItem}}' />
+</block>
+
+<!-- 分类导航  sort-->
+<import src='../../templates/sort-nav/sort-nav.wxml' />
+<block wx:for='{{sort}}' wx:for-item='sortItem' wx:key>
+  <template is='sortnav' data='{{...sortItem}}' />
+</block>
+
+<!-- 表单 form  一个页面只能存在一个-->
+<import src='../../templates/form/form.wxml' />
+<template is='form' data='{{form}}' />
+
+<!-- 底部导航 nav 一个页面只能存在一个-->
+<import src='../../templates/nav/nav.wxml' />
+<template is='nav' data='{{nav}}' />
+

@@ -1,0 +1,15 @@
+<template name="qingful-menu">
+	<view class="qingful-menu">
+	   <view class="qingful-menu-view"  wx:for="{{menuList}}" wx:key="_menu" wx:for-item="item" data-path="{{item.link}}"  bindtap="jumpMenu">
+	   		<view class="width:84rpx;height:84rpx;">
+	   		   <image  mode="scaleToFill"  src="{{item.menu_img}}" class="qingful-menu-image"/>
+	   		</view>
+	   		<view class="qingful-menu-text-view">
+		   		<text class="qingful-menu-text">
+	                {{item.menu_name}}
+		   		</text>
+	   		</view>
+	   		
+	   </view>
+	</view>
+</template>	

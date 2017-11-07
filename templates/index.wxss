@@ -1,0 +1,11 @@
+@import 'text/text.wxss';                 /* 文本 */
+@import 'image/image.wxss';               /* 图片 */ 
+@import 'iconfont/iconfont.wxss';         /* 字体图标 */ 
+@import 'video/video.wxss';               /* 视频 */ 
+@import 'swiper/swiper.wxss';             /* 幻灯片 */
+@import 'nav/nav.wxss';                   /* 底部导航栏 */
+@import 'scroll/scroll.wxss';             /* 左右滑动图 */
+@import 'sort-nav/sort-nav.wxss';         /* 分类导航 */ 
+@import 'form/form.wxss';                 /* 表单 */
+@import 'openMINA/openMINA.wxss';  
+

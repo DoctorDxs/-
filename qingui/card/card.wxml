@@ -1,0 +1,27 @@
+<template name="qingful-card">
+	<view class="qingful-card" style="background:{{color}}">
+	    <view class="qingful-card-top">
+ 				<view class="qingful-card-avater-view">
+ 				   <view class="qingful-card-img-view">   
+ 				       <image class="image_frame" src="{{cardData.img_url}}" class="qingful-card-avater"  mode="scaleToFill"> 
+	    
+					   </image>  
+				   </view>
+				   <view class="qingful-top-text">
+				   	 <text class="qingful-card-wxa-name">
+				   	 	{{cardData.name}}
+				   	 </text>
+				   	  <text class="qingful-card-wxa-detail">
+				   	 	{{cardData.detail}}
+				   	 </text>
+				   </view>   
+ 				</view>
+ 				<view class="qingful-card-right" bindtap="getVip" wx:if="{{cardData.is_used==0}}" data-id="{{cardData.id}}" data-index="{{index}}"  >
+ 				   <text>领取会员</text>
+ 				</view>
+	    </view>
+	    <image class="image_frame" src="/qingui/image/card.png" class="qingful-card-bg"  mode="scaleToFill"> 
+	    	<text class="qingful-card-number" wx:if="{{cardData.is_used==1}}">{{cardData.card_num}}</text> 
+		</image>  
+	</view>
+</template>	

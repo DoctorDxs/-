@@ -1,0 +1,12 @@
+<template name="qingful-swiper">
+	<view class="qingful-swiper">
+	    <swiper indicator-dots="true" indicator-color="rgba(255, 255, 255, .3)" style="height:{{slidesData[0].height+'rpx'}}"  indicator-active-color="{{color}}" autoplay="true" interval="2000" duration="1000" indicator-active-color="#fff">
+		    <block wx:for="{{slidesData}}" wx:for-item="item" wx:key="_slide">
+		      <swiper-item  >
+		        <image  mode="scaleToFill" src="{{item.img_url}}" style="width:100%;height:{{item.height+'rpx'}}" data-path="{{item.link}}"  bindtap="jumpSwiper" />
+		      </swiper-item>
+		    </block>
+  		</swiper>
+	</view>
+
+</template>	

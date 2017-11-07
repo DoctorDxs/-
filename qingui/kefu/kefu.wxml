@@ -1,0 +1,5 @@
+<template name="kefu">
+  <button open-type="contact" wx:if="{{kefu}}" hover-class="none">
+    <image style="position: fixed;bottom: 40rpx;right: 40rpx;width: 52rpx;height: 52rpx;border-radius: 50%;padding: 20rpx;background-color:{{color}};box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 4px 8px 0 rgba(0,0,0,.2);transition: bottom .2s ease-in-out;" src="/qingui/kefu/kefu.png"></image>
+  </button>
+</template>

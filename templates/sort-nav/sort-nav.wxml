@@ -1,0 +1,7 @@
+<template name='sortnav'>
+  <view class='topnav_style' style='top:{{top*2}}rpx;left:{{left*2}}rpx;width:{{width*2}}rpx;height:{{height*2}}rpx;position:{{position?position:"absolute"}};color:{{color}};background:{{bgColor}};font-size:{{font_size*2}}rpx;font-weight:{{font_weight}};font-style:{{font_style}};text-decration:{{text_decration}};text-align:{{text_align}};transform:{{rotate}};opacity:{{opacity}}'>
+    <block wx:for='{{nav_items}}' wx:key>
+      <view style='{{item.clickid===index ? "color:"+item.color+";border-bottom:"+item.border_bottom : "" }}' bindtap='onClick' data-click='{{item.click_type}}' data-skippath='{{item.skip_path}}' data-index='{{index}}' data-id='{{id}}'>{{item.title}}</view>
+    </block>
+  </view>
+</template>

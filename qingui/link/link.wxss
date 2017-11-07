@@ -1,0 +1,40 @@
+.qingful-link{
+	height:90px;
+	position:relative;
+	z-index:-100;
+	margin-top:-90px;
+}
+.qingful-link-img{
+	height:90px;
+	width:100%;
+	border-radius:10rpx;
+	filter:blur(10rpx)
+}
+.qingful-link-logo{
+	width:110rpx;
+	height:110rpx;
+	border-radius: 50%;
+	margin-top:34rpx;
+	margin-left:60rpx;
+	margin-right:24rpx;
+}
+/* .item:first-child .qingful-link-logo{
+      transform: scale(0.86);  
+} */
+.qingful-content{
+	height:90px;
+
+	background:rgba(0,0,0,0.2);
+	display:flex;	
+}
+.qingful-link-name{
+	font-size:32rpx;
+	color:#fff;
+}
+.qingful-link-detail{
+	font-size:28rpx;
+	color:#fff;
+	height:140rpx;
+	overflow: hidden; 
+	margin-top:10rpx;
+}

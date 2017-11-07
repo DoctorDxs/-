@@ -1,0 +1,31 @@
+<template name="qingful-scroll">
+
+  <scroll-view  scroll-x="true" style="margin-left:20rpx;" >
+  	<view class="qingful-scroll-content">
+  		<view wx:for="{{scorllList}}" wx:for-item="item" wx:key="_scroll" class="qingful-scroll-unit" data-path="index" style="width:{{(themeWidth-10)/3+'px'}};height:336rpx" data-path="{{item.link}}"  bindtap="jumpScroll">
+  		  <view class="qingful-theme-image" style="width:{{(themeWidth-10)/3+'px'}};height:226rpx">
+  		  	  <image  mode="scaleToFill" style="width:{{(themeWidth-10)/3+'px'}};height:226rpx;position:relative" src="{{item.product_img}}">
+                <i class="{{item.icon_type>0?'icon-label'+item.icon_type:''}} iconfont {{item.icon_type>0?'qingful-product-position'+item.icon_type:''}}" style="color:{{item.icon_color}}">
+                  <text  class="{{item.icon_type>0?'qingful-product-recommend'+item.icon_type:''}}" style="color:{{item.font_color}}">{{item.font}}</text>
+                </i>
+            </image>
+  		  </view>	
+     	 
+     	  <view  class="qingful-theme-view-text" style="width:{{(themeWidth-10)/3+'px'}};padding-top:16rpx;">
+     	  	   <text class="qingful-theme-text">{{item.product.name}}</text>
+     	  </view>
+     	  
+        <view  class="qingful-theme-view-text qingful-product-init" style="width:{{(themeWidth-10)/3+'px'}};height:56rpx">
+     	  	   <text class="qingful-theme-text" style="color:{{color}};flex:2">￥{{item.product.price}}</text>
+             <view style="text-align:center;flex:1">
+                  <i class="{{item.cart_type>0?'icon-cart'+item.cart_type:''}} iconfont qingful-product-cart" style="color:{{item.color?item.color:'#ff5555'}};font-size:58rpx"></i>
+             </view> 
+     	  </view>	
+
+        
+     	 
+     </view>
+  	</view>
+     
+  </scroll-view>
+</template>

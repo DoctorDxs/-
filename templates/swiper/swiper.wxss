@@ -1,0 +1,2 @@
+.swiper-style{display: block;position: absolute;z-index: 100;}
+.swiper-style image{height:100%;width:100%;}

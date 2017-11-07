@@ -1,0 +1,52 @@
+<template name="qingful-theme">
+  <view class="qingful-theme-content" >
+     <view class="qingful-theme-unit" wx:for="{{themeList}}" wx:key="_theme"  wx:for-item="item"  wx-if="{{type==4 || (type==5 && index<3) ||(type==6 && index<2) || (type==8 && index<4) ||(type==10 && index<2)}}" 
+     style="width:{{(themeWidth-1)/2+'px'}}" >
+     	<view class="qingful-theme-title">	
+     	  <text style="color:{{item.title_color?item.title_color:'#1d1d1d'}}">{{item.title}}</text>
+     	</view>
+     	<view class="qingful-theme-sub">	
+     	  <text style="color:{{item.detail_color?item.detail_color:'#1d1d1d'}}">{{item.detail}}</text>
+     	</view>
+     	<view class="qingful-theme-img-view"> 
+        
+     		<view  class="qingful-theme-list" wx:for="{{item.arr_url}}" wx:key="_item" wx:for-item="list"  data-path="{{list.link}}"  bindtap="jumpTheme">
+	     		 <image class="qingful-theme-img" mode="scaleToFill" src="{{list.img_url}}"> 
+            </image>	 
+	     	</view>
+     	 </view> 
+     	    
+      </view> 
+
+      <view class="qingful-theme-unit" wx:for="{{themeList}}" wx:key="_list" wx-if="{{type==5 && index>2}}" 
+     style="width:{{(themeWidth*2-8)/8+'px'}}" >
+     	 <view class="qingful-theme-title">	
+     	  <text style="color:{{item.title_color?item.title_color:'#1d1d1d'}}">{{item.title}}</text>
+     	</view>
+     	<view class="qingful-theme-sub">	
+     	  <text style="color:{{item.detail_color?item.detail_color:'#1d1d1d'}}">{{item.detail}}</text>
+     	</view>
+     	<view class="qingful-theme-img-view">
+     		<view  class="qingful-theme-list" wx:for="{{item.arr_url}}" wx:key="_item_arr" wx:for-item="list" data-path="{{list.link}}"  bindtap="jumpTheme">
+	     		<image class="qingful-theme-img" mode="scaleToFill" src="{{list.img_url}}">
+           </image>	
+	     	</view>
+     	</view>
+     </view>
+
+     <view class="qingful-theme-unit" wx:for="{{themeList}}" wx:key="_the_theme" wx-if="{{(type==6 && index>1) || (type==8 && index>3) ||(type==10 && index>1)}}" 
+     style="width:{{(themeWidth*2-6)/8+'px'}}" >
+     	  <view class="qingful-theme-title">	
+     	  <text style="color:{{item.title_color?item.title_color:'#1d1d1d'}}">{{item.title}}</text>
+     	</view>
+     	<view class="qingful-theme-sub">	
+     	  <text style="color:{{item.detail_color?item.detail_color:'#1d1d1d'}}">{{item.detail}}</text>
+     	</view>
+     	<view class="qingful-theme-img-view">
+     		<view  class="qingful-theme-list" wx:for="{{item.arr_url}}" wx:key="_the_url" wx:for-item="list" data-path="{{list.link}}"  bindtap="jumpTheme">
+	     		<image class="qingful-theme-img" mode="scaleToFill" src="{{list.img_url}}"></image>	
+	     	</view>
+     	</view>
+     </view>
+  </view> 
+</template>

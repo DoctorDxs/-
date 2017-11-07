@@ -1,0 +1,20 @@
+<template name="qingful-header">
+	<view class="qingful-row" style="background:{{index==0?color:'#f4f4f4'}};padding-bottom: {{top+'px'}};padding-top:{{top+'px'}};">
+	    <!-- <view class="qingful-header-view" style="margin-left:20rpx" bindtap="scan">
+	    	<i class="icon-scan iconfont qingful-icon"></i>
+	    	<text class="qingful-header-text">扫一扫</text>
+	    </view>
+ -->	<view class="qingful-row-content" style="border-radius:{{headerData.angle+'px'}};margin-left:{{left+'px'}};margin-right:{{left+'px'}}" >
+	  	   <view class="qingful-search" bindtap="productSearch">
+	          <i class="icon-search iconfont qingful-search"></i>
+	       </view>	
+	       <view class="qingful-search-content">
+	         <input placeholder="{{headerData.text}}" value="{{search_msg}}" style="text-align:{{headerData.text_align}};margin-left:{{headerData.text_align=='center'?'-30rpx':'0px'}};margin-right:{{headerData.text_align=='right'?'10rpx':'0px'}}"  class="qingful-input" bindinput="bindinput" bindconfirm="bindconfirm"/>
+	       </view>  
+	  	</view>
+	<!--   	<view class="qingful-header-view" style="margin-right:20rpx" >
+	    	<i class="icon-msg iconfont qingful-icon"></i>
+	    	<text class="qingful-header-text">消息</text>
+	    </view> -->
+	</view>
+</template>	

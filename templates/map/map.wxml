@@ -1,0 +1,3 @@
+<template name='map'>
+  <map wx:if='{{is_show}}' id='{{myMap}}' class='map_style' style='position:absolute;{{style}}' longitude='{{longitude}}' latitude='{{latitude}}'  markers='{{markers}}' controls='{{controls}}'></map>
+</template>

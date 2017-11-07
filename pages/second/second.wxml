@@ -1,0 +1,4 @@
+<import src='../../templates/openMINA/openMINA.wxml' />
+<block wx:for='{{MINA}}' wx:key wx:for-item='MINAItem'>
+  <template is='MINA' data='{{...MINAItem}}' />
+</block>

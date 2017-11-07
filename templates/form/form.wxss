@@ -1,0 +1,9 @@
+.form_style {position: absolute;width: 100%;}
+/* input 文字溢出处理  */
+input{display: block;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;border:0;outline: medium;}
+.item_style {display: flex;flex-direction: row;align-items: center}
+.item_style view:nth-child(2){border-left: 1px solid #efe;border-right: 1px solid #efe;align-items: center;}
+.item_style view{width: 100%;display: flex;flex-direction: row;align-items: center;padding:0 5px;}
+.item_style view text:nth-child(1) {width: 100%;}
+.btn{background: #fff;border-radius: 0;position: absolute;}
+.btn:after{content: none;}

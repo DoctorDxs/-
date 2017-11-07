@@ -1,0 +1,4 @@
+<template name='video'>
+  <video wx:if='{{is_show}}' class='video-style' style='{{style}}' src='{{src}}' poster='{{poster}}' autoplay='{{autoplay}}' loop='{{loop}}'>
+  </video>
+</template>

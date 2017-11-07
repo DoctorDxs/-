@@ -1,0 +1,3 @@
+<template name='icon'>
+   <text class='icon iconfont {{icon_name}}' style='top:{{top*2}}rpx;left:{{left*2}}rpx;width:{{width*2}}rpx;height:{{height*2}}rpx;position:{{position?position:"absolute"}};transform:{{rotate}};opacity:{{opacity}};border:{{border}};border-radius:{{border_radius}};color:{{color}};background:{{bgColor}};font-size:{{font_size*2}}rpx;' bindtap='onClick' data-click='{{click_type}}' data-skippath='{{skip_path}}'></text>
+</template>

@@ -1,0 +1,43 @@
+.qingful-theme-content{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.qingful-theme-unit{
+	background:#ffffff;
+	margin-bottom:2rpx;
+	height:248rpx;
+}
+.qingful-theme-title{
+	padding-top:24rpx;
+	padding-left:20rpx;
+	font-size:30rpx;
+	color:#1d1d1d;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+
+}
+.qingful-theme-sub{
+	color:#5e5e5e;
+	padding-left:20rpx;
+	font-size:22rpx;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+
+}
+.qingful-theme-img-view{
+	height:128rpx;
+	display:flex;
+	flex-direction:row;
+}
+.qingful-theme-list{
+	flex:1
+}
+
+.qingful-theme-img{
+	width:100%;
+	height:128rpx;
+}

@@ -1,0 +1,117 @@
+<import src="/utils/components/zanui/quantity/index.wxml"/>
+<template name="qingful-dialog">
+    <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+        <view class="zan-dialog__mask" bindtap="cancelBox" data-show="{{showDialog}}"/>
+        <view class="zan-dialog__container {{ detail_info.sku_status == 0 || detail_info.sku_list.length == 0 ? 'no_rule' : ''}}">
+            <view class="component-sku__hd">
+                <image class="component-sku__image" wx:if="{{detail_info.file.savepath}}" src="{{imgPath}}{{detail_info.file.savepath}}{{detail_info.file.savename}}"></image>
+                <image class="component-sku__image" wx:else src="/images/img/noimage.jpg" ></image>
+                <view class="component-sku__title zan-font-14 zan-ellipsis">{{detail_info.name}}</view>
+                <view wx:if="{{!detail_info.group_status}}">
+                    <view wx:if="{{detail_info.sku_status && detail_info.sku_list.length > 0}}" class="component-sku__title zan-font-16 zan-c-red">￥{{detail_info.selected_sku.price}}{{detail_info.selected_sku.unit?'/'+detail_info.selected_sku.unit:''}}</view>
+                    <view wx:else class="component-sku__title zan-font-16 zan-c-red">￥{{detail_info.price}}{{detail_info.unit?'/'+detail_info.unit:''}}</view>
+                </view>
+                <view wx:if="{{detail_info.group_status}}">
+                    <!-- 拼团中的加入购物车和单独购买  -->
+                    <view wx:if="{{btnStatus.isAddCart || btnStatus.buyAlone}}">
+                        <view wx:if="{{detail_info.sku_status && detail_info.sku_list.length > 0}}" class="component-sku__title zan-font-16 zan-c-red">￥{{detail_info.selected_sku.price}}{{detail_info.selected_sku.unit?'/'+detail_info.selected_sku.unit:''}}</view>
+                        <view wx:else class="component-sku__title zan-font-16 zan-c-red">￥{{detail_info.price}}{{detail_info.unit?'/'+detail_info.unit:''}}</view>
+                    </view>
+                    <!-- 拼团中的一键开团  -->
+                    <view wx:if="{{!btnStatus.isAddCart && !btnStatus.buyAlone}}">
+                        <view wx:if="{{detail_info.sku_status && detail_info.sku_list && detail_info.sku_list.length > 0}}" class="component-sku__title zan-font-16 zan-c-red">￥{{detail_info.pintuan_price}}{{detail_info.selected_sku.unit?'/'+detail_info.selected_sku.unit:''}}<span style="font-size: 12px;color:#999;text-decoration:line-through;">￥{{detail_info.selected_sku.price}}{{detail_info.selected_sku.unit?'/'+detail_info.selected_sku.unit:''}}</span></view>
+                        <view wx:else class="component-sku__title zan-font-16 zan-c-red">￥{{detail_info.pintuan_price}}{{detail_info.unit?'/'+detail_info.unit:''}}<span style="font-size: 12px;color:#999;text-decoration:line-through;">￥{{detail_info.price}}{{detail_info.unit?'/'+detail_info.unit:''}}</span></view>
+                    </view>
+                </view>
+                <!-- 点击取消弹出框 -->
+                <view class="component-sku__close" bindtap="cancelBox" data-show="{{showDialog}}">
+                    <view class="zan-icon zan-icon-close" style="color: #999; font-size: 22px"></view>
+                </view>
+                <!-- 规格 -->
+                <scroll-view scroll-y="true" class="component-sku__bd">
+                    <view class="zan-cell" wx:if="{{detail_info.sku_status == 1 && detail_info.sku_list.length > 0}}">
+                        <view class="zan-cell_bd">
+                            <view class="component-sku__sku-wrap  component-sku__sku-wrap--last-child">
+                                <view class="component-sku__sku-key">选取规格:</view>
+                                <view class="component-sku__sku-value-wrap">
+                                    <view class="zan-label {{item.selectSKU?'zan-label--primary':'zan-label--disabled'}}" wx:for="{{detail_info.sku_list}}" wx:key="_sku" bindtap="changeRule" data-sku="{{item}}">
+                                        <view class="sku__btn" wx:if="{{item.selectSKU}}" style="background: {{color}}">{{item.sku_name1}}{{item.sku_name2}}{{item.sku_name3}}</view>
+                                        <view class="sku__btn" wx:else>{{item.sku_name1}}{{item.sku_name2}}{{item.sku_name3}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="zan-cell zan-cell--last-child">
+                        <view class="zan-cell__bd quantity__wrap">
+                            <view class="quantity__label">
+                                <view wx:if="{{detail_info.sku_status && detail_info.sku_list.length > 0}}" style="font-size: 13px;">库存数量：<text class="zan-font-12 zan-c-gray-dark">剩余{{detail_info.selected_sku.store}}</text></view>
+                                <view wx:else>库存数量：<text class="zan-font-12 zan-c-gray-dark">剩余{{detail_info.store}}</text></view>
+                                <view>
+                                    <view  class="zan-font-12 zan-c-red" style="display: inline-block;">
+                                        <text ></text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <!-- 加减按钮 -->
+                        <view class="quantity__btn" wx:if="{{btnStatus.buyAlone}}">
+                            <template is="zan-quantity" data="{{ min: 1, quantity: detail_info.quantity, max: detail_info.store, componentId: 1 }}" />
+                        </view>
+                    </view>
+                </scroll-view>
+                <!-- 加入购物车 按钮 和 立即购买 按钮 -->
+                <view wx:if="{{!fromDetail}}" class="component-sku__ft">
+                    <block wx:if="{{ detail_info.selected_sku.store == 0 }}">
+                        <button class="zan-btn zan-btn--danger zan-btn--large zan-btn--disabled" disabled="{{true}}">已售罄</button>
+                    </block>
+                    <block wx:else>
+                        <block>
+                            <view 
+                                style="background: #ff7900"
+                                class="dialog-btn"
+                                bindtap="sureBtn"
+                                data-show="{{showDialog}}"
+                                data-data="{{detail_info}}">
+                                加入购物车
+                            </view>
+                            <view 
+                                style="background: {{color}}"
+                                class="dialog-btn"
+                                bindtap="nextStep"
+                                data-data="{{detail_info}}">
+                                立即购买
+                            </view>
+                        </block>
+                    </block>
+                </view>
+                <view wx:if="{{fromDetail}}" class="component-sku__ft">
+                    <block wx:if="{{ detail_info.selected_sku.store == 0 }}">
+                        <button class="zan-btn zan-btn--danger zan-btn--large zan-btn--disabled" disabled="{{true}}">已售罄</button>
+                    </block>
+                    <block wx:else>
+                        <block>
+                            <button 
+                                style="background: {{color}}"
+                                wx:if="{{btnStatus.isAddCart}}"
+                                class="zan-btn zan-btn--danger zan-btn--large"
+                                bindtap="sureBtn"
+                                data-show="{{showDialog}}"
+                                data-data="{{detail_info}}">
+                                加入购物车
+                            </button>
+                            <button 
+                                style="background: {{color}}"
+                                wx:if="{{!btnStatus.isAddCart}}"
+                                class="zan-btn zan-btn--danger zan-btn--large"
+                                bindtap="nextStep"
+                                data-data="{{detail_info}}">
+                                立即购买
+                            </button>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>	

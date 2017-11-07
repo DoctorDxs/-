@@ -1,0 +1,15 @@
+exports.Special = require("./special/special");
+exports.Header = require("./header/header");
+exports.Ads = require("./ads/ads");
+exports.Product = require("./product/product");
+exports.Theme = require("./theme/theme");
+exports.Swpier = require("./swiper/swiper");
+exports.Scroll = require("./scroll/scroll");
+exports.Coupon = require("./coupon/coupon");
+exports.Menu = require("./menu/menu");
+exports.BroadCast = require("./broadcast/broadcast");
+exports.Card = require("./card/card");
+exports.Link = require("./link/link");
+exports.TitleLink = require("./titlelink/titlelink");
+exports.Dialog = require("./dialog/dialog");
+exports.MenDian = require("./mendian/mendian");

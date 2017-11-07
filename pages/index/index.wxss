@@ -1,0 +1,2 @@
+@import '../../templates/index.wxss';
+page{height:3000px;background: #F4F4F4;}

@@ -1,0 +1,58 @@
+/*.qingful-row {
+	padding-top:27rpx;
+ 	flex-direction:row;
+	display:flex;
+	height:6vw;
+	align-items:center;
+	position:absolute;
+	z-index:999;
+	width:100%;
+}*/
+.qingful-header-view{
+	text-align: center;
+	height:60rpx;
+}
+.qingful-icon{
+	display:block;
+	font-size:58rpx;
+	color:#fff;
+}
+.qingful-header-text{
+	font-size:24rpx;
+    color:#fff; 
+	display:block;
+	margin-top:-6rpx;
+
+}
+.qingful-row-content{
+    flex:1;
+    height:66rpx;
+    /*margin-left:20rpx;
+    margin-right:20rpx;
+    margin-top:10rpx;*/
+    flex-direction:row;
+    display:flex;
+    background-color: #fff;
+}
+.qingful-search{
+    font-size: 20px;
+    color: #666;
+    line-height: 66rpx;
+    padding-left: 10rpx;
+}
+.qingful-search-content{
+    flex:1;
+    height:66rpx;
+}
+.qingful-input{
+	display:block;
+	height:66rpx;
+	text-overflow:clip;
+	overflow:hidden;
+	white-space:nowrap;
+	font-family:UICTFontTextStyleBody;
+	font-size:26rpx;
+	color:#999;
+	padding-top:2rpx;
+	padding-left:10rpx;
+}
